@@ -10,7 +10,7 @@ As simple landing page for FROOTI.
 
 ## Screenshots:
 
-[Poster](https://github.com/Momin-Mohammad/Prayagraj-xport/tree/main/frontend/blob/screenshots/poster.png)
-[History]("https://github.com/Momin-Mohammad/Prayagraj-xport/tree/main/frontend/blob/screenshots/history.png")
-[Ingredients]("https://github.com/Momin-Mohammad/Prayagraj-xport/tree/main/frontend/blob/screenshots/ingredients.png")
-[Products]("https://github.com/Momin-Mohammad/Prayagraj-xport/tree/main/frontend/blob/screenshots/products.png")
+![Poster](https://github.com/Momin-Mohammad/Prayagraj-xport/blob/main/frontend/src/screenshots/poster.png)
+![History](https://github.com/Momin-Mohammad/Prayagraj-xport/blob/main/frontend/src/screenshots/history.png)
+![Ingredients](https://github.com/Momin-Mohammad/Prayagraj-xport/blob/main/frontend/src/screenshots/ingredients.png)
+![Products](https://github.com/Momin-Mohammad/Prayagraj-xport/blob/main/frontend/src/screenshots/products.png)
