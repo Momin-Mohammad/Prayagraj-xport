@@ -16,25 +16,23 @@
   accent-color: var(--green);
 }
   
-  .box{
-    background-color: black;
+  .box, .box1{
+    background-color: orange;
     width: 25%;
     padding: 3%;
     border-radius: 10px;
     font-size: large;
     font-weight: bold;
-    color: orange;
+    color: white;
     text-align: center;
   }
 
-  .box1{
-    padding: 0;
-    width: 50%;
-    height: fit-content;
-    margin-left: 0px;
-  }
-
-  .box1 > img{
-    width: 100%;
+  .listItem{
+    font-size:larger;
+    display: flex;
+    padding-left: "1%";
+    justify-content: start;
+    gap:2rem;
+    align-items: center;
   }
   
