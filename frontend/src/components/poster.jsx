@@ -1,10 +1,9 @@
 import { Container } from "@mui/material";
-import poster from "../images/posterImage.png";
 
-export default function Poster(){
+export default function Poster({image}){
     return(
         <Container disableGutters maxWidth="xl" sx={{backgroundColor:"orange"}}>
-            <img style={{width:"100%"}} src={poster} placeholder="poster image" />
+            <img style={{width:"100%"}} src={image} placeholder="poster image" />
         </Container>
     )
 }

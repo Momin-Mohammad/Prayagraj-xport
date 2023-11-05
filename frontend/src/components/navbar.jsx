@@ -9,10 +9,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import LocalBarIcon from '@mui/icons-material/LocalBar';
 import frootiLogo from '../images/frootiLogo.png';
 
-const pages = ['About Frooti', 'Product', 'History'];
+const pages = ['History', 'Ingredient', 'Products'];
 
 export default function Navbar(){
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -32,7 +31,7 @@ export default function Navbar(){
 
   return (
     <AppBar disableGutters sx={{backgroundColor:'black', position:"sticky", top:"0px"}}>
-      <Container maxWidth='xl' >
+      <Container maxWidth='xl'>
         <Toolbar >
           <Typography
             href="#"
@@ -45,7 +44,7 @@ export default function Navbar(){
             <img style={{width:'100%'}} src={frootiLogo} placeholder="frooti logo" />
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }}}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -76,7 +75,7 @@ export default function Navbar(){
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" fontFamily="cursive">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -88,6 +87,7 @@ export default function Navbar(){
             href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
+              fontFamily:"cursive",
               display: { xs: 'flex', md: 'none' },
               width:{base:"10%",xs:"20%",lg:"8%"},
             }}

@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material";
 
-export default function IntroSection(){
+export default function products(){
     return(
         <Container>
             <Box>

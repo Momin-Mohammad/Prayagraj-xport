@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './ingredient.module.css';
 import { Box, Container, List, ListItemText } from '@mui/material';
-import frootiLife from '../images/frootiImage.jpg';
+import frootiLife from '../images/frootiImage.png';
 import BlurOnIcon from '@mui/icons-material/BlurOn';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -53,13 +53,15 @@ export default function Ingredient() {
       gap:{xs:'2%',lg:"0%"},
       justifyContent:"center",
       alignItems:"center",
-      padding:"2% 0%"
+      padding:"2% 0%",
+      backgroundColor:'whitesmoke',
       }}>
     
       <Box
       disableGutters
       sx={{
         width:{xs:"100%",sm:"100%",lg:"50%"},
+        backgroundColor:'whitesmoke',
         heigth:"100%",
         display: 'flex',
         justifyContent: 'center',
@@ -84,15 +86,14 @@ export default function Ingredient() {
       <Box disableGutters sx={{
        width:{sm:"100%",lg:"50%"},
        padding:"2% 0%",
-       backgroundColor:'rgb(19, 77, 19)',
+       backgroundColor:"rgb(3, 168, 244)",
        textAlign:'center',
-       color:"orange"
+       color:"whitesmoke"
       }}>
        <Box> 
         <List sx={{
           fontSize:'larger',
           fontWeight:'bold',
-          color:"orange"
         }}>Storage Conditions: </List>
 
 <ListItemText sx={{
@@ -102,7 +103,6 @@ export default function Ingredient() {
    justifyContent: 'start',
    gap:'2rem',
    aligItems: 'center',
-   color:"orange"
 }}><BlurOnIcon sx={{fontSize:'medium', color:"orange"}} />Tastes best when chilled.</ListItemText>
 <ListItemText sx={{
 fontSize:'large',
@@ -111,7 +111,6 @@ paddingLeft: "1%",
 justifyContent: 'start',
 gap:'2rem',
 aligItems: 'center',
-color:"orange"
 }}><BlurOnIcon sx={{fontSize:'medium', color:"orange"}} />Store away from sunlight.</ListItemText>
 <ListItemText sx={{
 fontSize:'large',
@@ -120,7 +119,6 @@ paddingLeft: "1%",
 justifyContent: 'start',
 gap:'2rem',
 aligItems: 'center',
-color:"orange"
 }}><BlurOnIcon sx={{fontSize:'medium', color:"orange"}} />Refrigerate after opening and consume within three days.</ListItemText>
 </Box>
 
@@ -136,7 +134,6 @@ paddingLeft: "1%",
 justifyContent: 'start',
 gap:'2rem',
 aligItems: 'center',
-color:"orange"
 }}><BlurOnIcon sx={{fontSize:'medium', color:"orange"}} />Shake well before Consuming.</ListItemText>
 <ListItemText sx={{
 fontSize:'large',
@@ -145,7 +142,6 @@ paddingLeft: "1%",
 justifyContent: 'start',
 gap:'2rem',
 aligItems: 'center',
-color:"orange"
 }}><BlurOnIcon sx={{fontSize:'medium', color:"orange"}} />Do not buy if the bottle is leaking or the seal is broken.</ListItemText>
 <ListItemText sx={{
 fontSize:'large',
@@ -154,7 +150,6 @@ paddingLeft: "1%",
 justifyContent: 'start',
 gap:'2rem',
 aligItems: 'center',
-color:"orange"
 }}><BlurOnIcon sx={{fontSize:'medium', color:"orange"}} />Commercial Export of this Pack is Strictly Prohibited, and is Liable for Prosecution.</ListItemText>
       </Box>
 
