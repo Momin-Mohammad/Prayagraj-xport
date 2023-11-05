@@ -1,29 +1,73 @@
 import { Box, Container, Typography } from "@mui/material";
 import image from '../images/softdrinks.png'
+import { useLayoutEffect, useRef } from "react";
+import frootiLifeBGImg from "../images/frootiLife-BgImg.png";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function About(){
+    const refer = useRef();
+
+    useLayoutEffect(()=>{
+        const ctx = gsap.context((self) => {
+            const box1  = self.selector('#rotatingImg');
+            const box2 = self.selector('#rotatingImg-wrap')
+              gsap.to(box1, {
+                rotateZ: 900,
+                scrollTrigger: {
+                  trigger: box1,
+                  start: box2,
+                  scrub: 1,
+                },
+              });
+          
+      }, refer);
+      return () => ctx.revert(); // <- Cleanup!
+    },[])
+
     return(
         <Container disableGutters maxWidth='xl'
            sx={{
             display: {base:'flex',xs:'block',md:'flex', lg:'flex'},
             textAlign: "center",
             }}>
-            <Box sx={{
-                height:{base:'auto',xs:'60vh',md:'auto',lg:'auto'},
+            <Box id="rotatingImg-wrap" ref={refer} sx={{
+                height:{base:'auto',xs:'40vh',md:'auto',lg:'auto'},
                 display:"flex",
                 justifyContent:"center",
                 alignItems:"center",
+                flexDirection:"column",
                 fontSize:'xx-large',
                 backgroundColor: "orange",
                 width: {base:'50%',xs:"100%",md:'50%', lg:"50%"},
                 fontWeight:'bold',
                 color:"green",
-                backgroundImage: `url(${image})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: "50% 70%",
-                backgroundPosition: "center",
                 }}>
-              Mango FROOTI, Fresh And Juicy
+                <Box  sx={{
+                    position:'relative',
+                    top:'20%',
+                    width:{base:'30%',xs:'30%',md:'40%',lg:"50%"},
+                    heigth:"60%",
+                    margin:"auto",
+                }}>
+                <img style={{
+                    margin:'auto',
+                    width:"100%"
+                }} 
+                id="rotatingImg" src={frootiLifeBGImg} placeholder="rotating image"/>
+
+              </Box>
+              <Typography sx={{
+                fontSize :{xs:'50px',md:'60px',lg:'75px'},
+                fontWeight: 'bold',
+                color: 'whitesmoke',
+                position : 'relative',
+                width:"90%",
+                top:'-30%',
+              }}>Live the Frooti Life</Typography>
+
             </Box>
             <Box sx={{
                 width: {base:'50%',xs:"100%",md:'50%', lg:"50%"}

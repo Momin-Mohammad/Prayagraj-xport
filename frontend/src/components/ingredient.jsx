@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styles from './ingredient.module.css';
-import { Box, Container, List, ListItem } from '@mui/material';
+import { Box, Container, List, ListItem, Typography } from '@mui/material';
 import frootiLife from '../images/liveTheFrootiLife.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -44,10 +44,14 @@ export default function Ingredient() {
        width:"50%"
       }}>
         <List>
-          <ListItem></ListItem>
-          <ListItem></ListItem>
-          <ListItem></ListItem>
-          <ListItem></ListItem>
+          <Typography>The drink contains :</Typography>
+          <ListItem>Mango Pulp</ListItem>
+          <ListItem>Water</ListItem>
+          <ListItem>Citric Acid</ListItem>
+          <ListItem>Ascorbic Acid</ListItem>
+          <ListItem>Salt</ListItem>
+          <ListItem>Sugar</ListItem>
+          <ListItem>Colouring ang Flavouring</ListItem>
         </List>
       </Box>
     
